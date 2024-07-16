@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="FrameWorks.Testcomponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error Validation Test(failed)" verbose="0">
+    <classes>
+      <class name="FrameWorks.SeleniumFrameworkDesign.ErrorValidationsTest">
+        <methods>
+          <include name="productErrorValidation"/>
+          <include name="closeBrowser"/>
+          <include name="launchApplication"/>
+          <include name="loginErrorValidation"/>
+        </methods>
+      </class> <!-- FrameWorks.SeleniumFrameworkDesign.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validation Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Stand Alone Test(failed)" verbose="0">
+    <classes>
+      <class name="FrameWorks.SeleniumFrameworkDesign.StandAloneTest">
+        <methods>
+          <include name="StandAlone" invocation-numbers="0 1"/>
+          <include name="closeBrowser"/>
+          <include name="OrderIsDisplayed"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- FrameWorks.SeleniumFrameworkDesign.StandAloneTest -->
+    </classes>
+  </test> <!-- Stand Alone Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
